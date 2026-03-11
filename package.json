@@ -1,0 +1,20 @@
+{
+  "name": "pw-test-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "e2e-test": "playwright test --project Chromium_browser",
+    "e2e-test_msedge": "playwright test --project Edge_browser",
+    "e2e-test_iphone": "playwright test --project IPhone_Mobile",
+    "e2e-test_viewReport": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.5"
+  }
+}
