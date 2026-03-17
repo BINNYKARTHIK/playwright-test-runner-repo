@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
-    testDir: 'e2e@tests',
+    testDir: 'e2e-tests',
 
     fullyParallel: false,
 
@@ -14,7 +14,7 @@ export default defineConfig({
         ['html', {outputFile: 'test artifacts/executionReport.html'}]
    ],
 
-   outputDir: 'test@artifacts',
+   outputDir: 'test-artifacts',
 
    timeout: 1000 * 60 * 60,
 
@@ -22,7 +22,7 @@ export default defineConfig({
     timeout: 10000
    },
 
-   testMatch: 'e2e@tests/*.ts',
+   testMatch: 'e2e-tests/*.ts',
 
    use:{
     baseURL: '/',
