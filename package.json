@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "e2e-test": "playwright test --project Chromium_browser",
+    "e2e-test_firefox": "playwright test --project Firefox_browser",
+    "e2e-test_webkit": "playwright test --project Webkit_browser",
     "e2e-test_msedge": "playwright test --project Edge_browser",
     "e2e-test_iphone": "playwright test --project IPhone_Mobile",
     "e2e-test_viewReport": "playwright show-report"

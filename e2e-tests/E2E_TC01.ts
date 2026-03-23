@@ -1,10 +1,22 @@
-import { test, expect, chromium, Browser, Page } from '@playwright/test'
+import { test, expect, chromium, Browser, Page, firefox, webkit } from '@playwright/test'
 
 let browser: Browser;
 let page: Page;
 
-test.beforeAll(async () => {
-    browser = await chromium.launch()
+test.beforeAll(async ({}, testInfo) => {
+    switch (testInfo.project.name) {
+        case 'Chromium_browser':
+            browser = await chromium.launch()
+            break;
+        case 'Firefox_browser':
+            browser = await firefox.launch()
+            break;
+        case 'Webkit_browser':
+            browser = await webkit.launch()
+            break;
+        default:
+            browser = await chromium.launch()
+    }
     page = await browser.newPage()
 })
 

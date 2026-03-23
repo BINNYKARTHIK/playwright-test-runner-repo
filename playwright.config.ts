@@ -59,6 +59,33 @@ export default defineConfig({
         }
     },
     {
+        name: 'Firefox_browser',
+        use: {
+
+            baseURL: 'https://playwright.dev/',
+
+            ...devices['Desktop Firefox'],
+             
+            colorScheme: 'dark',
+
+            screenshot: 'on',
+
+            viewport: { width: 1280, height: 720}
+        }
+    },
+    {
+        name: 'Webkit_browser',
+        use: {
+            ...devices['Desktop Safari'],
+             
+            colorScheme: 'dark',
+
+            screenshot: 'on',
+
+            viewport: { width: 1280, height: 720}
+        }
+    },
+    {
         name: 'Edge_browser',
         use: {
 
